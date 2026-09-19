@@ -1,0 +1,1002 @@
+[
+  {
+    "message_id": "m096",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m072",
+    "disposition": "archive",
+    "reason": "Automated SaaS platform notification / activity alert",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m001",
+    "disposition": "reply",
+    "reason": "Direct inquiry or scheduling proposal requiring response",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m003",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m112",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m005",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m088",
+    "disposition": "delegate",
+    "reason": "Team operational coordination suited for delegation",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m064",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m104",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m080",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m044",
+    "disposition": "reply",
+    "reason": "Direct inquiry or scheduling proposal requiring response",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m097",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m073",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m113",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m089",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m065",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m008",
+    "disposition": "reply",
+    "reason": "Direct inquiry or scheduling proposal requiring response",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m105",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m081",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m041",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m098",
+    "disposition": "archive",
+    "reason": "Automated infrastructure monitoring / operational alert",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m074",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m015",
+    "disposition": "defer",
+    "reason": "Action or attendance required for upcoming deadline/event",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m114",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m090",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m066",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m106",
+    "disposition": "archive",
+    "reason": "Periodic marketing newsletter / content digest",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m082",
+    "disposition": "archive",
+    "reason": "Automated infrastructure monitoring / operational alert",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m026",
+    "disposition": "delegate",
+    "reason": "Team operational coordination suited for delegation",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m027",
+    "disposition": "delegate",
+    "reason": "Team operational coordination suited for delegation",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m028",
+    "disposition": "delegate",
+    "reason": "Team operational coordination suited for delegation",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m099",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m075",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m029",
+    "disposition": "defer",
+    "reason": "Action or attendance required for upcoming deadline/event",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m030",
+    "disposition": "reply",
+    "reason": "Direct inquiry or scheduling proposal requiring response",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m033",
+    "disposition": "delegate",
+    "reason": "Team operational coordination suited for delegation",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m115",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m091",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m067",
+    "disposition": "archive",
+    "reason": "Automated SaaS platform notification / activity alert",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m107",
+    "disposition": "archive",
+    "reason": "Automated infrastructure monitoring / operational alert",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m083",
+    "disposition": "archive",
+    "reason": "Periodic marketing newsletter / content digest",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m108",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m084",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m034",
+    "disposition": "delegate",
+    "reason": "Team operational coordination suited for delegation",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m100",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m076",
+    "disposition": "archive",
+    "reason": "Automated infrastructure monitoring / operational alert",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m038",
+    "disposition": "defer",
+    "reason": "Action or attendance required for upcoming deadline/event",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m116",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m092",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m068",
+    "disposition": "archive",
+    "reason": "Periodic marketing newsletter / content digest",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m051",
+    "disposition": "reply",
+    "reason": "Direct inquiry or scheduling proposal requiring response",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m109",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m085",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m010",
+    "disposition": "reply",
+    "reason": "Direct inquiry or scheduling proposal requiring response",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m101",
+    "disposition": "reply",
+    "reason": "Direct inquiry or scheduling proposal requiring response",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m077",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m040",
+    "disposition": "reply",
+    "reason": "Direct inquiry or scheduling proposal requiring response",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m057",
+    "disposition": "delegate",
+    "reason": "Team operational coordination suited for delegation",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m117",
+    "disposition": "defer",
+    "reason": "Action or attendance required for upcoming deadline/event",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m069",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m093",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m035",
+    "disposition": "delegate",
+    "reason": "Team operational coordination suited for delegation",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m017",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m024",
+    "disposition": "escalate",
+    "reason": "Suspicious instruction or wire request requiring security review",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m049",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m061",
+    "disposition": "defer",
+    "reason": "Action or attendance required for upcoming deadline/event",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m086",
+    "disposition": "archive",
+    "reason": "Automated SaaS platform notification / activity alert",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m062",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m110",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m036",
+    "disposition": "defer",
+    "reason": "Action or attendance required for upcoming deadline/event",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m042",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m078",
+    "disposition": "archive",
+    "reason": "Periodic marketing newsletter / content digest",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m102",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m021",
+    "disposition": "escalate",
+    "reason": "Suspicious instruction or wire request requiring security review",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m013",
+    "disposition": "reply",
+    "reason": "Direct inquiry or scheduling proposal requiring response",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m118",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m070",
+    "disposition": "archive",
+    "reason": "Automated SaaS platform notification / activity alert",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m045",
+    "disposition": "escalate",
+    "reason": "Suspicious instruction or wire request requiring security review",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m094",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m059",
+    "disposition": "delegate",
+    "reason": "Team operational coordination suited for delegation",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m012",
+    "disposition": "reply",
+    "reason": "Direct inquiry or scheduling proposal requiring response",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m039",
+    "disposition": "escalate",
+    "reason": "Suspicious instruction or wire request requiring security review",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m053",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m087",
+    "disposition": "archive",
+    "reason": "Periodic marketing newsletter / content digest",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m063",
+    "disposition": "archive",
+    "reason": "Automated transactional receipt / billing statement",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m023",
+    "disposition": "escalate",
+    "reason": "Suspicious instruction or wire request requiring security review",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m111",
+    "disposition": "archive",
+    "reason": "Periodic marketing newsletter / content digest",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m018",
+    "disposition": "defer",
+    "reason": "Action or attendance required for upcoming deadline/event",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m016",
+    "disposition": "reply",
+    "reason": "Direct inquiry or scheduling proposal requiring response",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m046",
+    "disposition": "reply",
+    "reason": "Direct inquiry or scheduling proposal requiring response",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m019",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m043",
+    "disposition": "reply",
+    "reason": "Direct inquiry or scheduling proposal requiring response",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m103",
+    "disposition": "archive",
+    "reason": "Automated infrastructure monitoring / operational alert",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m079",
+    "disposition": "archive",
+    "reason": "Automated SaaS platform notification / activity alert",
+    "handled_by": "rule",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m048",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m047",
+    "disposition": "delegate",
+    "reason": "Team operational coordination suited for delegation",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m055",
+    "disposition": "delegate",
+    "reason": "Team operational coordination suited for delegation",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m119",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m095",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  },
+  {
+    "message_id": "m071",
+    "disposition": "archive",
+    "reason": "Informational communication archived after inspection",
+    "handled_by": "model",
+    "proposed_action": null,
+    "recipient": null,
+    "draft_body": null,
+    "cited_ids": []
+  }
+]

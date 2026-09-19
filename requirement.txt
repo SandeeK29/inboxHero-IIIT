@@ -1,0 +1,6 @@
+# Core dependencies
+python-dotenv>=1.0.0
+
+# Optional: Required only if using Google Gemini provider (LLM_PROVIDER=gemini)
+# Default execution uses local Ollama (zero third-party dependencies beyond python-dotenv)
+google-genai>=0.1.0
