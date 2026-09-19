@@ -1,0 +1,16 @@
+# Environment & secrets
+.env
+*.env
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Submission zips
+*.zip
