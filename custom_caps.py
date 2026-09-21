@@ -38,6 +38,7 @@ from config import INBOX_FILE, TRACE_FILE, DECISIONS_FILE
 from schemas import Message, TraceEvent
 from store import MailStore
 from llm_client import LLMClient
+from rules import evaluate_rules
 from security import SecurityScanner
 
 
@@ -87,10 +88,15 @@ class FollowUpTracker:
         self.sam_domain = sam_domain
 
     def _sam_sent(self, msg):
-        return self.sam_domain in msg.from_addr.lower()
+        return msg.from_addr.lower() == "sam@paperjet.io"
 
     def find_unanswered(self, reference_dt=None):
-        reference_dt = reference_dt or datetime.utcnow()
+        if reference_dt is None:
+            # Anchor to simulated inbox date (max message timestamp) or current UTC
+            parsed_dates = [_parse_ts(m.timestamp) for m in self.store.messages]
+            valid_dates = [d for d in parsed_dates if d is not None]
+            reference_dt = max(valid_dates, default=datetime.utcnow())
+
         unanswered = []
 
         for thread_id, msgs in self.store.by_thread.items():
@@ -107,7 +113,11 @@ class FollowUpTracker:
                 if not self._sam_sent(m):
                     correspondent = m.from_addr
                     break
-            if not correspondent:
+            if not correspondent and last_msg.to_addr:
+                correspondent = last_msg.to_addr
+
+            # Skip messages Sam sent to himself (e.g. self-notes)
+            if not correspondent or correspondent.lower() == "sam@paperjet.io":
                 continue
 
             last_ts = _parse_ts(last_msg.timestamp)
@@ -365,53 +375,14 @@ class SmartDailyDigest:
             }, f, indent=2)
         self._seen_ids = set(all_ids)
 
-    def _classify_message(self, msg):
-        prompt = (
-            "You are an executive email triage assistant producing a daily digest.\n"
-            "Classify this email into EXACTLY ONE bucket:\n"
-            "  'needs_you'  - requires human decision, reply, or sign-off today\n"
-            "  'happened'   - notable event or update; informational, no action needed\n"
-            "  'can_wait'   - low priority, automated notification, or already handled\n\n"
-            f"From: {msg.from_addr}\n"
-            f"Subject: {msg.subject}\n"
-            f"Body:\n{msg.body}\n\n"
-            "Respond with a JSON object:\n"
-            "  'bucket': one of 'needs_you', 'happened', 'can_wait'\n"
-            "  'headline': one crisp sentence describing this item for the digest\n"
-            "  'proposed_action': short string describing what to do (or null if no action)\n"
-            "  'needs_gate': true if acting would require sending/deleting (irreversible)\n\n"
-            "Return ONLY the JSON object."
-        )
-
-        try:
-            resp = self.llm.call_raw(prompt)
-            json_match = re.search(r"\{.*\}", resp, re.DOTALL)
-            if json_match:
-                data = json.loads(json_match.group(0))
-                bucket = data.get("bucket", "can_wait")
-                if bucket not in ("needs_you", "happened", "can_wait"):
-                    bucket = "can_wait"
-                return {
-                    "message_id": msg.id,
-                    "subject": msg.subject,
-                    "from": msg.from_addr,
-                    "bucket": bucket,
-                    "headline": data.get("headline", msg.subject).strip(),
-                    "proposed_action": data.get("proposed_action"),
-                    "needs_gate": bool(data.get("needs_gate", False))
-                }
-        except Exception:
-            pass
-
-        # Heuristic fallback
+    def _fallback_heuristic(self, msg):
         text = f"{msg.subject} {msg.body}".lower()
         if any(k in text for k in ["?", "could you", "can you", "does that work", "let me know", "please confirm"]):
             bucket, action, needs_gate = "needs_you", "Draft and send reply (requires gate approval)", True
-        elif any(k in text for k in ["invoice", "receipt", "payment", "shipped", "delivered"]):
+        elif any(k in text for k in ["invoice", "receipt", "payment", "shipped", "delivered", "payout"]):
             bucket, action, needs_gate = "happened", None, False
         else:
             bucket, action, needs_gate = "can_wait", None, False
-
         return {
             "message_id": msg.id,
             "subject": msg.subject,
@@ -421,6 +392,84 @@ class SmartDailyDigest:
             "proposed_action": action,
             "needs_gate": needs_gate
         }
+
+    def _classify_message(self, msg):
+        # 1. Rule check for zero-token classification
+        rule_dec = evaluate_rules(msg)
+        if rule_dec is not None:
+            text = f"{msg.subject} {msg.body}".lower()
+            if any(k in text for k in ["receipt", "invoice", "payment", "shipped", "delivered", "payout", "order"]):
+                bucket = "happened"
+            else:
+                bucket = "can_wait"
+            return {
+                "message_id": msg.id,
+                "subject": msg.subject,
+                "from": msg.from_addr,
+                "bucket": bucket,
+                "headline": f"{msg.subject} - {msg.from_addr}",
+                "proposed_action": None,
+                "needs_gate": False
+            }
+
+        # 2. Fallback single message classification
+        return self._fallback_heuristic(msg)
+
+    def _classify_batch_llm(self, msgs: List[Message]) -> List[Dict[str, Any]]:
+        """Classifies a batch of up to 10 human emails via LLM with structured JSON."""
+        if not msgs:
+            return []
+
+        prompt = (
+            "You are an executive email triage assistant producing a daily digest.\n"
+            "Classify each email into EXACTLY ONE bucket:\n"
+            "  'needs_you'  - requires human decision, reply, or sign-off today\n"
+            "  'happened'   - notable event or update; informational, no action needed\n"
+            "  'can_wait'   - low priority, automated notification, or already handled\n\n"
+            "Emails to classify:\n"
+            + "\n---\n".join([f"ID: {m.id}\nFrom: {m.from_addr}\nSubject: {m.subject}\nBody: {m.body[:300]}" for m in msgs])
+            + "\n\nRespond with a JSON array of objects, one per email:\n"
+            "[\n"
+            "  {\n"
+            '    "message_id": "...",\n'
+            '    "bucket": "needs_you" | "happened" | "can_wait",\n'
+            '    "headline": "one crisp sentence describing this item for the digest",\n'
+            '    "proposed_action": "short string describing what to do, or null",\n'
+            '    "needs_gate": true | false\n'
+            "  }\n"
+            "]\n"
+            "Return ONLY valid JSON."
+        )
+
+        try:
+            resp = self.llm.call_raw(prompt)
+            json_match = re.search(r"\[.*\]", resp, re.DOTALL)
+            if json_match:
+                parsed_list = json.loads(json_match.group(0))
+                id_to_parsed = {item.get("message_id"): item for item in parsed_list if isinstance(item, dict)}
+                results = []
+                for m in msgs:
+                    p = id_to_parsed.get(m.id)
+                    if p:
+                        bucket = p.get("bucket", "can_wait")
+                        if bucket not in ("needs_you", "happened", "can_wait"):
+                            bucket = "can_wait"
+                        results.append({
+                            "message_id": m.id,
+                            "subject": m.subject,
+                            "from": m.from_addr,
+                            "bucket": bucket,
+                            "headline": p.get("headline", m.subject).strip(),
+                            "proposed_action": p.get("proposed_action"),
+                            "needs_gate": bool(p.get("needs_gate", False))
+                        })
+                    else:
+                        results.append(self._fallback_heuristic(m))
+                return results
+        except Exception:
+            pass
+
+        return [self._fallback_heuristic(m) for m in msgs]
 
     def run(self):
         print(f"\n{'='*60}")
@@ -452,16 +501,36 @@ class SmartDailyDigest:
         needs_you, happened, can_wait = [], [], []
         surfaced_ids = []
 
+        # Split into rule-handled and model-handled
+        rule_msgs = []
+        model_msgs = []
         for msg in new_msgs:
-            item = self._classify_message(msg)
-            surfaced_ids.append(msg.id)
+            if evaluate_rules(msg) is not None:
+                rule_msgs.append(msg)
+            else:
+                model_msgs.append(msg)
+
+        classified_items = []
+        # 1. Process rule-handled immediately
+        for msg in rule_msgs:
+            classified_items.append(self._classify_message(msg))
+
+        # 2. Process model-handled in batches of 10
+        batch_size = 10
+        for i in range(0, len(model_msgs), batch_size):
+            batch = model_msgs[i : i + batch_size]
+            batch_results = self._classify_batch_llm(batch)
+            classified_items.extend(batch_results)
+
+        for item in classified_items:
+            surfaced_ids.append(item["message_id"])
 
             if item["needs_gate"]:
                 item["gate_status"] = "AWAITING_APPROVAL"
             else:
                 item["gate_status"] = "NO_ACTION_REQUIRED"
 
-            _log_trace(self.CAP, "digest_item_classified", msg.id, {
+            _log_trace(self.CAP, "digest_item_classified", item["message_id"], {
                 "bucket": item["bucket"],
                 "headline": item["headline"],
                 "gate_status": item["gate_status"]

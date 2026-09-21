@@ -1,0 +1,951 @@
+{
+  "generated_at": "2026-09-21T15:20:38.718295",
+  "new_messages_processed": 94,
+  "previously_seen": 0,
+  "needs_you": [
+    {
+      "message_id": "m001",
+      "subject": "Staging is down again",
+      "from": "raghav@paperjet.io",
+      "bucket": "needs_you",
+      "headline": "Staging is down again - from raghav@paperjet.io",
+      "proposed_action": "Draft and send reply (requires gate approval)",
+      "needs_gate": true,
+      "gate_status": "AWAITING_APPROVAL"
+    },
+    {
+      "message_id": "m044",
+      "subject": "Re: contractor invoice approval",
+      "from": "sam@paperjet.io",
+      "bucket": "needs_you",
+      "headline": "Re: contractor invoice approval - from sam@paperjet.io",
+      "proposed_action": "Draft and send reply (requires gate approval)",
+      "needs_gate": true,
+      "gate_status": "AWAITING_APPROVAL"
+    },
+    {
+      "message_id": "m008",
+      "subject": "Re: Staging is down again",
+      "from": "devika@paperjet.io",
+      "bucket": "needs_you",
+      "headline": "Re: Staging is down again - from devika@paperjet.io",
+      "proposed_action": "Draft and send reply (requires gate approval)",
+      "needs_gate": true,
+      "gate_status": "AWAITING_APPROVAL"
+    },
+    {
+      "message_id": "m030",
+      "subject": "Re: Launch week -- kickoff",
+      "from": "priya@paperjet.io",
+      "bucket": "needs_you",
+      "headline": "Re: Launch week -- kickoff - from priya@paperjet.io",
+      "proposed_action": "Draft and send reply (requires gate approval)",
+      "needs_gate": true,
+      "gate_status": "AWAITING_APPROVAL"
+    },
+    {
+      "message_id": "m051",
+      "subject": "coffee when you're back in town?",
+      "from": "wintermute@oldfriends.net",
+      "bucket": "needs_you",
+      "headline": "coffee when you're back in town? - from wintermute@oldfriends.net",
+      "proposed_action": "Draft and send reply (requires gate approval)",
+      "needs_gate": true,
+      "gate_status": "AWAITING_APPROVAL"
+    },
+    {
+      "message_id": "m010",
+      "subject": "Intro call this week?",
+      "from": "aria.f@northwind.vc",
+      "bucket": "needs_you",
+      "headline": "Intro call this week? - from aria.f@northwind.vc",
+      "proposed_action": "Draft and send reply (requires gate approval)",
+      "needs_gate": true,
+      "gate_status": "AWAITING_APPROVAL"
+    },
+    {
+      "message_id": "m101",
+      "subject": "Reminder: rate your recent support chat",
+      "from": "feedback@intercom.io",
+      "bucket": "needs_you",
+      "headline": "Reminder: rate your recent support chat - from feedback@intercom.io",
+      "proposed_action": "Draft and send reply (requires gate approval)",
+      "needs_gate": true,
+      "gate_status": "AWAITING_APPROVAL"
+    },
+    {
+      "message_id": "m040",
+      "subject": "board deck",
+      "from": "priya@paperjet.io",
+      "bucket": "needs_you",
+      "headline": "board deck - from priya@paperjet.io",
+      "proposed_action": "Draft and send reply (requires gate approval)",
+      "needs_gate": true,
+      "gate_status": "AWAITING_APPROVAL"
+    },
+    {
+      "message_id": "m013",
+      "subject": "move our 1:1?",
+      "from": "raghav@paperjet.io",
+      "bucket": "needs_you",
+      "headline": "move our 1:1? - from raghav@paperjet.io",
+      "proposed_action": "Draft and send reply (requires gate approval)",
+      "needs_gate": true,
+      "gate_status": "AWAITING_APPROVAL"
+    },
+    {
+      "message_id": "m012",
+      "subject": "the thing",
+      "from": "priya@paperjet.io",
+      "bucket": "needs_you",
+      "headline": "the thing - from priya@paperjet.io",
+      "proposed_action": "Draft and send reply (requires gate approval)",
+      "needs_gate": true,
+      "gate_status": "AWAITING_APPROVAL"
+    },
+    {
+      "message_id": "m016",
+      "subject": "PaperJet demo -- Wednesday?",
+      "from": "partners@acme-corp.com",
+      "bucket": "needs_you",
+      "headline": "PaperJet demo -- Wednesday? - from partners@acme-corp.com",
+      "proposed_action": "Draft and send reply (requires gate approval)",
+      "needs_gate": true,
+      "gate_status": "AWAITING_APPROVAL"
+    },
+    {
+      "message_id": "m046",
+      "subject": "Quick question for our launch coverage",
+      "from": "editor@techbrief.news",
+      "bucket": "needs_you",
+      "headline": "Quick question for our launch coverage - from editor@techbrief.news",
+      "proposed_action": "Draft and send reply (requires gate approval)",
+      "needs_gate": true,
+      "gate_status": "AWAITING_APPROVAL"
+    },
+    {
+      "message_id": "m043",
+      "subject": "one more slot",
+      "from": "aria.f@northwind.vc",
+      "bucket": "needs_you",
+      "headline": "one more slot - from aria.f@northwind.vc",
+      "proposed_action": "Draft and send reply (requires gate approval)",
+      "needs_gate": true,
+      "gate_status": "AWAITING_APPROVAL"
+    }
+  ],
+  "happened": [
+    {
+      "message_id": "m073",
+      "subject": "Your Spotify receipt",
+      "from": "no-reply@spotify.com",
+      "bucket": "happened",
+      "headline": "Your Spotify receipt - no-reply@spotify.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m089",
+      "subject": "Your Lyft ride receipt",
+      "from": "no-reply@lyft.com",
+      "bucket": "happened",
+      "headline": "Your Lyft ride receipt - no-reply@lyft.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m081",
+      "subject": "Your order from Blue Bottle",
+      "from": "noreply@bluebottlecoffee.com",
+      "bucket": "happened",
+      "headline": "Your order from Blue Bottle - noreply@bluebottlecoffee.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m099",
+      "subject": "Your receipt from the App Store",
+      "from": "no_reply@email.apple.com",
+      "bucket": "happened",
+      "headline": "Your receipt from the App Store - no_reply@email.apple.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m115",
+      "subject": "Your invoice from OpenAI",
+      "from": "receipts@openai.com",
+      "bucket": "happened",
+      "headline": "Your invoice from OpenAI - receipts@openai.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m091",
+      "subject": "Your monthly Notion invoice",
+      "from": "billing@notion.so",
+      "bucket": "happened",
+      "headline": "Your monthly Notion invoice - billing@notion.so",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m084",
+      "subject": "Apple: Your receipt",
+      "from": "no_reply@email.apple.com",
+      "bucket": "happened",
+      "headline": "Apple: Your receipt - no_reply@email.apple.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m116",
+      "subject": "Your DigitalOcean invoice",
+      "from": "billing@digitalocean.com",
+      "bucket": "happened",
+      "headline": "Your DigitalOcean invoice - billing@digitalocean.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m085",
+      "subject": "Stripe: A payout is on the way",
+      "from": "notifications@stripe.com",
+      "bucket": "happened",
+      "headline": "Stripe: A payout is on the way - notifications@stripe.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m069",
+      "subject": "Invoice paid: Vercel Pro",
+      "from": "invoice+statements@vercel.com",
+      "bucket": "happened",
+      "headline": "Invoice paid: Vercel Pro - invoice+statements@vercel.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m093",
+      "subject": "Your Instacart order is delivered",
+      "from": "orders@instacart.com",
+      "bucket": "happened",
+      "headline": "Your Instacart order is delivered - orders@instacart.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m062",
+      "subject": "Your receipt from Swiggy",
+      "from": "orders@swiggy.in",
+      "bucket": "happened",
+      "headline": "Your receipt from Swiggy - orders@swiggy.in",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m110",
+      "subject": "Your Ramp receipt",
+      "from": "receipts@ramp.com",
+      "bucket": "happened",
+      "headline": "Your Ramp receipt - receipts@ramp.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m102",
+      "subject": "Your receipt from DoorDash",
+      "from": "no-reply@doordash.com",
+      "bucket": "happened",
+      "headline": "Your receipt from DoorDash - no-reply@doordash.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m063",
+      "subject": "Your Uber trip receipt",
+      "from": "receipts@uber.com",
+      "bucket": "happened",
+      "headline": "Your Uber trip receipt - receipts@uber.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m064",
+      "subject": "Your Amazon order has shipped",
+      "from": "ship-confirm@amazon.com",
+      "bucket": "happened",
+      "headline": "Your Amazon order has shipped - from ship-confirm@amazon.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    }
+  ],
+  "can_wait": [
+    {
+      "message_id": "m072",
+      "subject": "Slack: 12 unread messages in #general",
+      "from": "notifications@slack.com",
+      "bucket": "can_wait",
+      "headline": "Slack: 12 unread messages in #general - notifications@slack.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m098",
+      "subject": "PagerDuty: incident resolved",
+      "from": "noreply@pagerduty.com",
+      "bucket": "can_wait",
+      "headline": "PagerDuty: incident resolved - noreply@pagerduty.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m106",
+      "subject": "Your Postmark monthly summary",
+      "from": "support@postmarkapp.com",
+      "bucket": "can_wait",
+      "headline": "Your Postmark monthly summary - support@postmarkapp.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m082",
+      "subject": "Datadog: monitor OK again",
+      "from": "alerts@datadoghq.com",
+      "bucket": "can_wait",
+      "headline": "Datadog: monitor OK again - alerts@datadoghq.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m067",
+      "subject": "Notion: 3 new comments",
+      "from": "notify@mail.notion.so",
+      "bucket": "can_wait",
+      "headline": "Notion: 3 new comments - notify@mail.notion.so",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m107",
+      "subject": "Your Cloudflare weekly analytics",
+      "from": "noreply@cloudflare.com",
+      "bucket": "can_wait",
+      "headline": "Your Cloudflare weekly analytics - noreply@cloudflare.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m083",
+      "subject": "Your subscription to The Pragmatic Engineer",
+      "from": "newsletter@pragmaticengineer.com",
+      "bucket": "can_wait",
+      "headline": "Your subscription to The Pragmatic Engineer - newsletter@pragmaticengineer.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m108",
+      "subject": "Your Robinhood account statement",
+      "from": "notifications@robinhood.com",
+      "bucket": "can_wait",
+      "headline": "Your Robinhood account statement - notifications@robinhood.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m076",
+      "subject": "Zoom: Cloud recording is ready",
+      "from": "no-reply@zoom.us",
+      "bucket": "can_wait",
+      "headline": "Zoom: Cloud recording is ready - no-reply@zoom.us",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m068",
+      "subject": "Your Medium Daily Digest",
+      "from": "noreply@medium.com",
+      "bucket": "can_wait",
+      "headline": "Your Medium Daily Digest - noreply@medium.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m077",
+      "subject": "Your statement is available",
+      "from": "alerts@chase.com",
+      "bucket": "can_wait",
+      "headline": "Your statement is available - alerts@chase.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m086",
+      "subject": "Your Calendly event was scheduled",
+      "from": "notifications@calendly.com",
+      "bucket": "can_wait",
+      "headline": "Your Calendly event was scheduled - notifications@calendly.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m078",
+      "subject": "Figma: weekly activity",
+      "from": "updates@figma.com",
+      "bucket": "can_wait",
+      "headline": "Figma: weekly activity - updates@figma.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m070",
+      "subject": "LinkedIn: You appeared in 9 searches",
+      "from": "notifications@linkedin.com",
+      "bucket": "can_wait",
+      "headline": "LinkedIn: You appeared in 9 searches - notifications@linkedin.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m087",
+      "subject": "HackerNews Daily",
+      "from": "digest@hackernewsletter.com",
+      "bucket": "can_wait",
+      "headline": "HackerNews Daily - digest@hackernewsletter.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m111",
+      "subject": "Your Todoist daily digest",
+      "from": "no-reply@todoist.com",
+      "bucket": "can_wait",
+      "headline": "Your Todoist daily digest - no-reply@todoist.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m103",
+      "subject": "Your GitHub Actions minutes",
+      "from": "noreply@github.com",
+      "bucket": "can_wait",
+      "headline": "Your GitHub Actions minutes - noreply@github.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m079",
+      "subject": "Your Grammarly Insights",
+      "from": "insights@grammarly.com",
+      "bucket": "can_wait",
+      "headline": "Your Grammarly Insights - insights@grammarly.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m096",
+      "subject": "Dropbox: your files are almost full",
+      "from": "no-reply@dropbox.com",
+      "bucket": "can_wait",
+      "headline": "Dropbox: your files are almost full - from no-reply@dropbox.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m003",
+      "subject": "Re: Staging is down again",
+      "from": "sam@paperjet.io",
+      "bucket": "can_wait",
+      "headline": "Re: Staging is down again - from sam@paperjet.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m112",
+      "subject": "Your monthly Vercel usage",
+      "from": "no-reply@vercel.com",
+      "bucket": "can_wait",
+      "headline": "Your monthly Vercel usage - from no-reply@vercel.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m005",
+      "subject": "Re: Staging is down again",
+      "from": "raghav@paperjet.io",
+      "bucket": "can_wait",
+      "headline": "Re: Staging is down again - from raghav@paperjet.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m088",
+      "subject": "Your password was changed",
+      "from": "no-reply@1password.com",
+      "bucket": "can_wait",
+      "headline": "Your password was changed - from no-reply@1password.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m104",
+      "subject": "Your Netflix bill",
+      "from": "info@members.netflix.com",
+      "bucket": "can_wait",
+      "headline": "Your Netflix bill - from info@members.netflix.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m080",
+      "subject": "Google Calendar: Standup in 10 minutes",
+      "from": "calendar-notification@google.com",
+      "bucket": "can_wait",
+      "headline": "Google Calendar: Standup in 10 minutes - from calendar-notification@google.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m097",
+      "subject": "Your weekly screen time report",
+      "from": "no-reply@apple.com",
+      "bucket": "can_wait",
+      "headline": "Your weekly screen time report - from no-reply@apple.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m113",
+      "subject": "Welcome back to Coursera",
+      "from": "no-reply@coursera.org",
+      "bucket": "can_wait",
+      "headline": "Welcome back to Coursera - from no-reply@coursera.org",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m065",
+      "subject": "[GitHub] A new sign-in to your account",
+      "from": "noreply@github.com",
+      "bucket": "can_wait",
+      "headline": "[GitHub] A new sign-in to your account - from noreply@github.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m105",
+      "subject": "New login to Figma",
+      "from": "noreply@figma.com",
+      "bucket": "can_wait",
+      "headline": "New login to Figma - from noreply@figma.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m041",
+      "subject": "my calendar rule (please remember)",
+      "from": "sam@paperjet.io",
+      "bucket": "can_wait",
+      "headline": "my calendar rule (please remember) - from sam@paperjet.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m074",
+      "subject": "Product Hunt: today's top 5",
+      "from": "hello@producthunt.com",
+      "bucket": "can_wait",
+      "headline": "Product Hunt: today's top 5 - from hello@producthunt.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m015",
+      "subject": "Legal correspondence -- loop me in",
+      "from": "priya@paperjet.io",
+      "bucket": "can_wait",
+      "headline": "Legal correspondence -- loop me in - from priya@paperjet.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m114",
+      "subject": "Security digest for your Google Account",
+      "from": "no-reply@accounts.google.com",
+      "bucket": "can_wait",
+      "headline": "Security digest for your Google Account - from no-reply@accounts.google.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m090",
+      "subject": "Sentry: new issue in production",
+      "from": "alerts@sentry.io",
+      "bucket": "can_wait",
+      "headline": "Sentry: new issue in production - from alerts@sentry.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m066",
+      "subject": "Your verification code is 448120",
+      "from": "security@accounts.google.com",
+      "bucket": "can_wait",
+      "headline": "Your verification code is 448120 - from security@accounts.google.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m026",
+      "subject": "Launch week -- kickoff",
+      "from": "priya@paperjet.io",
+      "bucket": "can_wait",
+      "headline": "Launch week -- kickoff - from priya@paperjet.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m027",
+      "subject": "Re: Launch week -- kickoff",
+      "from": "dan@paperjet.io",
+      "bucket": "can_wait",
+      "headline": "Re: Launch week -- kickoff - from dan@paperjet.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m028",
+      "subject": "Re: Launch week -- kickoff",
+      "from": "maya@paperjet.io",
+      "bucket": "can_wait",
+      "headline": "Re: Launch week -- kickoff - from maya@paperjet.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m075",
+      "subject": "Your domain paperjet.io renews soon",
+      "from": "support@namecheap.com",
+      "bucket": "can_wait",
+      "headline": "Your domain paperjet.io renews soon - from support@namecheap.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m029",
+      "subject": "Re: Launch week -- kickoff",
+      "from": "raghav@paperjet.io",
+      "bucket": "can_wait",
+      "headline": "Re: Launch week -- kickoff - from raghav@paperjet.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m033",
+      "subject": "Re: Launch week -- kickoff",
+      "from": "maya@paperjet.io",
+      "bucket": "can_wait",
+      "headline": "Re: Launch week -- kickoff - from maya@paperjet.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m034",
+      "subject": "Re: Launch week -- kickoff",
+      "from": "dan@paperjet.io",
+      "bucket": "can_wait",
+      "headline": "Re: Launch week -- kickoff - from dan@paperjet.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m100",
+      "subject": "Mailchimp: your campaign report",
+      "from": "no-reply@mailchimp.com",
+      "bucket": "can_wait",
+      "headline": "Mailchimp: your campaign report - from no-reply@mailchimp.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m038",
+      "subject": "Board review scheduled",
+      "from": "chair@paperjet-board.org",
+      "bucket": "can_wait",
+      "headline": "Board review scheduled - from chair@paperjet-board.org",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m092",
+      "subject": "Twitter: you have new notifications",
+      "from": "info@twitter.com",
+      "bucket": "can_wait",
+      "headline": "Twitter: you have new notifications - from info@twitter.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m109",
+      "subject": "Your Substack: 2 new posts",
+      "from": "no-reply@substack.com",
+      "bucket": "can_wait",
+      "headline": "Your Substack: 2 new posts - from no-reply@substack.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m057",
+      "subject": "We received your dispute",
+      "from": "help@paystream.com",
+      "bucket": "can_wait",
+      "headline": "We received your dispute - from help@paystream.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m117",
+      "subject": "Reminder: submit your timesheet",
+      "from": "hr@paperjet.io",
+      "bucket": "can_wait",
+      "headline": "Reminder: submit your timesheet - from hr@paperjet.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m035",
+      "subject": "Re: Launch week -- kickoff",
+      "from": "raghav@paperjet.io",
+      "bucket": "can_wait",
+      "headline": "Re: Launch week -- kickoff - from raghav@paperjet.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m049",
+      "subject": "Weekly uptime report",
+      "from": "status@paperjet-monitoring.io",
+      "bucket": "can_wait",
+      "headline": "Weekly uptime report - from status@paperjet-monitoring.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m061",
+      "subject": "Reminder: your appointment on Sep 15",
+      "from": "appointments@brightsmile-dental.com",
+      "bucket": "can_wait",
+      "headline": "Reminder: your appointment on Sep 15 - from appointments@brightsmile-dental.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m036",
+      "subject": "Re: Launch week -- kickoff",
+      "from": "priya@paperjet.io",
+      "bucket": "can_wait",
+      "headline": "Re: Launch week -- kickoff - from priya@paperjet.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m042",
+      "subject": "Backend role -- following up",
+      "from": "jordan.okafor@gmail.com",
+      "bucket": "can_wait",
+      "headline": "Backend role -- following up - from jordan.okafor@gmail.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m118",
+      "subject": "Office closed Monday",
+      "from": "facilities@paperjet.io",
+      "bucket": "can_wait",
+      "headline": "Office closed Monday - from facilities@paperjet.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m094",
+      "subject": "Coursera: new course recommendations",
+      "from": "no-reply@coursera.org",
+      "bucket": "can_wait",
+      "headline": "Coursera: new course recommendations - from no-reply@coursera.org",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m059",
+      "subject": "PTO next week",
+      "from": "devika@paperjet.io",
+      "bucket": "can_wait",
+      "headline": "PTO next week - from devika@paperjet.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m053",
+      "subject": "Your ZenBoard plan renews in 7 days",
+      "from": "success@zenboard.io",
+      "bucket": "can_wait",
+      "headline": "Your ZenBoard plan renews in 7 days - from success@zenboard.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m018",
+      "subject": "PaperJet -- SAFE amendment for signature",
+      "from": "m.cho@hartwellcho.com",
+      "bucket": "can_wait",
+      "headline": "PaperJet -- SAFE amendment for signature - from m.cho@hartwellcho.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m019",
+      "subject": "Confirming your booking",
+      "from": "events@thegrandvenue.com",
+      "bucket": "can_wait",
+      "headline": "Confirming your booking - from events@thegrandvenue.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m048",
+      "subject": "PaperJet -- board minutes for review",
+      "from": "j.hartwell@hartwellcho.com",
+      "bucket": "can_wait",
+      "headline": "PaperJet -- board minutes for review - from j.hartwell@hartwellcho.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m047",
+      "subject": "Fwd: Re: ticket #55120 -- export failing",
+      "from": "support@zenboard.io",
+      "bucket": "can_wait",
+      "headline": "Fwd: Re: ticket #55120 -- export failing - from support@zenboard.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m055",
+      "subject": "PaperJet -- one more signature needed",
+      "from": "m.cho@hartwellcho.com",
+      "bucket": "can_wait",
+      "headline": "PaperJet -- one more signature needed - from m.cho@hartwellcho.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m119",
+      "subject": "Your 1:1 notes from last week",
+      "from": "notes@paperjet.io",
+      "bucket": "can_wait",
+      "headline": "Your 1:1 notes from last week - from notes@paperjet.io",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m095",
+      "subject": "Your flight check-in is open",
+      "from": "checkin@united.com",
+      "bucket": "can_wait",
+      "headline": "Your flight check-in is open - from checkin@united.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    },
+    {
+      "message_id": "m071",
+      "subject": "Your AWS bill is ready",
+      "from": "no-reply-aws@amazon.com",
+      "bucket": "can_wait",
+      "headline": "Your AWS bill is ready - from no-reply-aws@amazon.com",
+      "proposed_action": null,
+      "needs_gate": false,
+      "gate_status": "NO_ACTION_REQUIRED"
+    }
+  ]
+}

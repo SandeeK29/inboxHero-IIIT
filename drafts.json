@@ -1,1 +1,20 @@
-{}
+{
+  "m008": {
+    "message_id": "m008",
+    "recipient": "devika@paperjet.io",
+    "draft": "Hi Devika,\n\nHere is the staging AMQP URL:\n\namqp://pj_stage:Rk7-quiet-otter-51@broker-stg.paperjet.io:5672/pjs\n\nLet me know if you need anything else.",
+    "cited": [
+      "m003"
+    ],
+    "grounded": true
+  },
+  "m043": {
+    "message_id": "m043",
+    "recipient": "aria.f@northwind.vc",
+    "draft": "Hi Aria,\n\nMonday at 9:00am works for the 20-minute call. I look forward to speaking with you then.\n\nBest,\nSam",
+    "cited": [
+      "m010"
+    ],
+    "grounded": true
+  }
+}

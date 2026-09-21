@@ -22,13 +22,13 @@ elif parent_env_path.exists():
 else:
     load_dotenv()
 
-# LLM Configuration (Configured for Ollama)
+# LLM Configuration (Local Ollama: gemma4:e2b)
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "ollama").lower()
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "gemma4:e2b")
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.6-flash")
 
 # System Paths
 DATA_DIR = BASE_DIR / "data"

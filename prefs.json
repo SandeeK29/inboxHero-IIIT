@@ -6,5 +6,29 @@
       "cc_recipient": "sam@paperjet.io"
     },
     "source_msg_id": "m039"
+  },
+  "meeting_start_time_rule": {
+    "description": "Do not accept or schedule meetings before 11:00 AM; always propose 11:00 AM or later.",
+    "parameters": {
+      "entity_or_sender": "user",
+      "cc_recipient": null
+    },
+    "source_msg_id": "m041"
+  },
+  "cc_legal_mail": {
+    "description": "Always CC the user on all correspondence received from lawyers at Hartwell & Cho.",
+    "parameters": {
+      "entity_or_sender": "Hartwell & Cho",
+      "cc_recipient": null
+    },
+    "source_msg_id": "m015"
+  },
+  "autonomous_drafting_and_archiving": {
+    "description": "Enable autonomous mode for automatic sending of drafted replies and skipping confirmation steps for archiving/deleting.",
+    "parameters": {
+      "entity_or_sender": "investors and press contacts",
+      "cc_recipient": "N/A"
+    },
+    "source_msg_id": "m039"
   }
 }

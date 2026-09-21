@@ -1,0 +1,4 @@
+To: devika@paperjet.io
+Subject: Re: Staging is down again
+
+The staging AMQP URL is amqp://pj_stage:Rk7-quiet-otter-51@broker-stg.paperjet.io:5672/pjs.

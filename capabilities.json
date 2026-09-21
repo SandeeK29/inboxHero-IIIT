@@ -3,9 +3,9 @@
   "repo": "https://github.com/SandeeK29/inboxHero-IIIT",
   "system": {
     "framework": "none",
-    "model": "Google Gemini 2.5 Flash (primary); gemma4:e2b via Ollama (fallback/development)",
-    "messages_processed": 120,
-    "rule_handled": "21 messages handled by deterministic rules (transactional digests, receipts, automated notifications) — zero LLM tokens consumed",
+    "model": "gemma4:e2b via Ollama",
+    "messages_processed": 100,
+    "rule_handled": "33 messages handled by deterministic rules (transactional digests, receipts, automated notifications) — zero LLM tokens consumed",
     "dispositions": [
       "reply",
       "archive",
@@ -13,7 +13,7 @@
       "delegate",
       "escalate"
     ],
-    "retrieval": "thread-walk — every message walks its thread_id index chronologically; keyword fallback via MailStore.search_keyword()",
+    "retrieval": "thread-walk — every message walks its thread_id index chronologically; keyword cross-thread retrieval fallback via MailStore.search_keyword()",
     "irreversible": [
       "send",
       "delete"
@@ -25,7 +25,7 @@
       "defer"
     ],
     "gate": "approval with dry-run mode; irreversible sends blocked behind SafetyGate.execute_send(); outbox writes only on explicit human 'y'",
-    "preference_demo": "m031: always CC co-founder on Legal mail — extracted by LLM, persisted to prefs.json, survives process restart"
+    "preference_demo": "m015: always CC co-founder on Legal mail (applied to m018) — extracted by LLM, persisted to prefs.json, survives process restart"
   },
   "capabilities": [
     {
@@ -86,7 +86,7 @@
       "id": "X1",
       "name": "Follow-up Tracker",
       "tier": "B",
-      "claim": "Finds threads where Sam sent the last message and received no reply in 3+ days. For each such thread, drafts a short, grounded chase email using only facts from the thread history. m022 (Priya, sent Sep 2, unanswered) appears; m014 (already answered in-thread) does not.",
+      "claim": "Finds threads where Sam sent the last message and received no reply in 3+ days. For each such thread, drafts a short, grounded chase email using only facts from the thread history. m044 (Priya, sent Sep 2, unanswered) appears; m014 (already answered in-thread) does not.",
       "command": "python demo.py --cap X1",
       "observable": "Prints a JSON list of {message_id, days_waiting, correspondent, draft}. Each draft is grounded in the thread; none are templated.",
       "evidence": "trace.jsonl events tagged cap=X1 with event_type=followup_chase_drafted and followup_scan_complete"

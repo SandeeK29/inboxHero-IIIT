@@ -56,36 +56,38 @@ def run_r2():
         print(f"    {res['draft'][:120]}...")
 
 
-def run_r3():
-    """R3: Gate — dry-run of the human-in-the-loop approval gate."""
+def run_r3(live: bool = False):
+    """R3: Gate — dry-run or live interactive human-in-the-loop approval gate."""
     import json
     from config import DECISIONS_FILE
     from store import MailStore
     from gate import SafetyGate
     from drafting import GroundedDrafter
 
-    gate = SafetyGate(dry_run=True)
+    dry_run = not live
+    gate = SafetyGate(dry_run=dry_run)
     store = MailStore()
     drafter = GroundedDrafter(store)
 
-    decisions = []
-    if DECISIONS_FILE.exists():
-        with open(DECISIONS_FILE, "r", encoding="utf-8") as f:
-            decisions = json.load(f)
-
-    reply_ids = [d["message_id"] for d in decisions if d.get("disposition") == "reply"][:3]
+    # Target m008 (grounded staging credentials reply)
+    target_ids = ["m008"]
     gated = 0
-    for mid in reply_ids:
+    for mid in target_ids:
         msg = store.get_message(mid)
         if not msg:
             continue
         draft_res = drafter.draft_reply(mid)
         draft_text = draft_res.get("draft", "[No draft]") if draft_res else "[No draft]"
-        gate.execute_send(mid, msg.from_addr, msg.subject, draft_text, cap="R3")
+        sent = gate.execute_send(mid, msg.from_addr, msg.subject, draft_text, cap="R3")
         gated += 1
 
-    print(f"\n[R3] Gate dry-run complete. {gated} proposed send(s) intercepted. 0 outbox writes.")
-    print(f"     Suppressed: {gate.suppressed_count}  |  Actual writes: {gate.outbox_writes_count}")
+    if dry_run:
+        print(f"\n[R3] Gate dry-run complete. {gated} proposed send(s) intercepted. 0 outbox writes.")
+        print(f"     Suppressed: {gate.suppressed_count}  |  Actual writes: {gate.outbox_writes_count}")
+        print("     Tip: Run 'python demo.py --cap R3 --live' to approve and write to outbox/.")
+    else:
+        print(f"\n[R3] Gate live execution complete.")
+        print(f"     Actual writes: {gate.outbox_writes_count} to outbox/")
 
 
 def run_r4():
@@ -200,12 +202,19 @@ Capabilities:
         choices=list(CAPS.keys()),
         help="Capability ID to run"
     )
+    parser.add_argument(
+        "--live", action="store_true",
+        help="Run gate in live interactive mode (prompts for human approval)"
+    )
     args = parser.parse_args()
 
     cap_fn = CAPS[args.cap]
     print(f"\nRunning capability: {args.cap}")
     print("=" * 60)
-    cap_fn()
+    if args.cap == "R3":
+        cap_fn(live=args.live)
+    else:
+        cap_fn()
 
 
 if __name__ == "__main__":
