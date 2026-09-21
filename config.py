@@ -25,7 +25,7 @@ else:
 # LLM Configuration (Configured for Ollama)
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "ollama").lower()
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen2.5:1.5b")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "gemma4:e2b")
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
@@ -38,6 +38,8 @@ PREFS_FILE = BASE_DIR / "prefs.json"
 DECISIONS_FILE = BASE_DIR / "decisions.json"
 TRACE_FILE = BASE_DIR / "trace.jsonl"
 DASHBOARD_FILE = BASE_DIR / "dashboard.html"
+DASHBOARD_JSON_FILE = BASE_DIR / "dashboard.json"
+DRAFTS_FILE = BASE_DIR / "drafts.json"  # Persisted draft cache — avoids re-running LLM on every dashboard refresh
 
 # Ensure output directories exist
 OUTBOX_DIR.mkdir(parents=True, exist_ok=True)

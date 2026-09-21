@@ -1,0 +1,113 @@
+{
+  "student": "Sandeep Kulkarni, evernorth-aai-1150010",
+  "repo": "https://github.com/SandeeK29/inboxHero-IIIT",
+  "system": {
+    "framework": "none",
+    "model": "Google Gemini 2.5 Flash (primary); gemma4:e2b via Ollama (fallback/development)",
+    "messages_processed": 120,
+    "rule_handled": "21 messages handled by deterministic rules (transactional digests, receipts, automated notifications) — zero LLM tokens consumed",
+    "dispositions": [
+      "reply",
+      "archive",
+      "defer",
+      "delegate",
+      "escalate"
+    ],
+    "retrieval": "thread-walk — every message walks its thread_id index chronologically; keyword fallback via MailStore.search_keyword()",
+    "irreversible": [
+      "send",
+      "delete"
+    ],
+    "reversible": [
+      "draft",
+      "label",
+      "archive",
+      "defer"
+    ],
+    "gate": "approval with dry-run mode; irreversible sends blocked behind SafetyGate.execute_send(); outbox writes only on explicit human 'y'",
+    "preference_demo": "m031: always CC co-founder on Legal mail — extracted by LLM, persisted to prefs.json, survives process restart"
+  },
+  "capabilities": [
+    {
+      "id": "R1",
+      "name": "Triage",
+      "tier": "A",
+      "claim": "Assigns every inbox message exactly one disposition (reply/archive/defer/delegate/escalate). Rule-handled messages consume zero LLM tokens; the remainder are sent to the configured LLM in batches of 10.",
+      "command": "python demo.py --cap R1",
+      "observable": "Prints batch-by-batch progress and writes decisions.json. Rule-handled messages (transactional, receipts) appear with handled_by=rule; the rest show handled_by=model.",
+      "evidence": "decisions.json, trace.jsonl events tagged cap=R1"
+    },
+    {
+      "id": "R2",
+      "name": "Grounded Draft",
+      "tier": "B",
+      "claim": "Drafts a reply only when the required facts exist in prior thread messages. If the thread contains no answerable context, the system drafts nothing — no canned 'I will look into it' text.",
+      "command": "python demo.py --cap R2",
+      "observable": "For each reply-dispositioned message: prints a grounded draft with cited message IDs, or '[R2] Information required to answer <id> was not found in inbox. Drafting nothing.' Cited IDs are verified to exist in the thread.",
+      "evidence": "trace.jsonl events tagged cap=R2 with event_type=draft and cited field"
+    },
+    {
+      "id": "R3",
+      "name": "Safety Gate",
+      "tier": "A",
+      "claim": "All irreversible actions (send, delete) pass through SafetyGate before execution. In dry-run mode, zero files appear in outbox/. In live mode, each proposed send is displayed and requires explicit 'y' from the human.",
+      "command": "python demo.py --cap R3",
+      "observable": "Prints [GATE --dry-run] intercept notices for each proposed send. Reports suppressed count and confirms outbox_writes_count=0.",
+      "evidence": "trace.jsonl events tagged cap=R3 with event_type=gate and status=dry_run; outbox/ directory contains zero new files"
+    },
+    {
+      "id": "R4",
+      "name": "Standing Instructions",
+      "tier": "B",
+      "claim": "Detects standing preferences in email bodies using the LLM (e.g. 'always CC X on legal mail'), persists them to prefs.json, and applies them on the next process run — after exit and restart.",
+      "command": "python demo.py --cap R4",
+      "observable": "Prints each extracted preference key (e.g. cc_legal_mail). Active preferences listed. prefs.json updated on disk. On the next run, outgoing drafts for matching senders include the CC address.",
+      "evidence": "prefs.json, trace.jsonl events tagged cap=R4 with event_type=preference_saved and preference_applied"
+    },
+    {
+      "id": "R5",
+      "name": "Hostile Inbox Defence",
+      "tier": "B",
+      "claim": "Detects prompt injections, credential phishing, domain spoofing, wire fraud, and privilege escalation in inbox messages. Refuses to act, logs a refusal naming the message id and what was attempted, and leaves the message in place.",
+      "command": "python demo.py --cap R5",
+      "observable": "Prints FLAGGED [<id>]: <attack_type> — <attempted_action> for each hostile message. Confirms zero outbox writes on its behalf.",
+      "evidence": "trace.jsonl events tagged cap=R5 with event_type=refusal; no corresponding file in outbox/"
+    },
+    {
+      "id": "R6",
+      "name": "Dashboard",
+      "tier": "C",
+      "claim": "Generates a three-pane dashboard (HTML + JSON) from a completed run: (1) Pending Actions with grounded drafts and gate status, (2) Flagged Threats refused and left in place, (3) Commitments extracted from the inbox as a calendar with multi-message derivation and surfaced schedule collisions.",
+      "command": "python demo.py --cap R6",
+      "observable": "Writes dashboard.html and dashboard.json. Pane 1 shows only genuine human-to-human pending replies (automated senders filtered, one entry per thread). Pane 3 surfaces the Sep 16 board deck deadline derived from two messages (m038 + m040) and the Sep 15 15:00 schedule collision.",
+      "evidence": "dashboard.html, dashboard.json, trace.jsonl events tagged cap=R6 with event_type=dashboard_generated"
+    },
+    {
+      "id": "X1",
+      "name": "Follow-up Tracker",
+      "tier": "B",
+      "claim": "Finds threads where Sam sent the last message and received no reply in 3+ days. For each such thread, drafts a short, grounded chase email using only facts from the thread history. m022 (Priya, sent Sep 2, unanswered) appears; m014 (already answered in-thread) does not.",
+      "command": "python demo.py --cap X1",
+      "observable": "Prints a JSON list of {message_id, days_waiting, correspondent, draft}. Each draft is grounded in the thread; none are templated.",
+      "evidence": "trace.jsonl events tagged cap=X1 with event_type=followup_chase_drafted and followup_scan_complete"
+    },
+    {
+      "id": "X2",
+      "name": "Thread Summarizer",
+      "tier": "B",
+      "claim": "For every thread with 3+ messages, walks the full conversation and uses the LLM to produce a one-sentence summary and the single open question or next action still pending. Collapses long threads to the essential question.",
+      "command": "python demo.py --cap X2",
+      "observable": "Prints a JSON list of {thread_id, message_count, summary, open_question, message_ids} for each qualifying thread. The staging-down thread and launch-week thread each appear with a distinct open question.",
+      "evidence": "trace.jsonl events tagged cap=X2 with event_type=thread_summarised"
+    },
+    {
+      "id": "X3",
+      "name": "Smart Daily Digest",
+      "tier": "C",
+      "claim": "Agentic daily briefing with three sections: NEEDS YOU NOW, HAPPENED TODAY, CAN WAIT. Genuinely agentic: (1) uses LLM to plan which bucket each message belongs to, (2) persists digest_log.json so already-surfaced messages are skipped on the next run, (3) holds any irreversible action for human gate approval before acting.",
+      "command": "python demo.py --cap X3",
+      "observable": "Prints a structured digest to stdout and writes digest_output.json. Run it twice: the second run reports fewer new messages because digest_log.json persists seen IDs. Items in NEEDS YOU NOW show gate_status=AWAITING_APPROVAL.",
+      "evidence": "digest_output.json, digest_log.json (grows between runs), trace.jsonl events tagged cap=X3"
+    }
+  ]
+}

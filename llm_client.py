@@ -107,7 +107,7 @@ class LLMClient:
             "",
             "Output MUST be a valid JSON array of objects with keys 'id', 'disposition', and 'reason'.",
             "Example:",
-            '[{"id": "m001", "disposition": "reply", "reason": "Engineering teammate asking for help with staging"}]',
+            '[{"id": "MSG_ID", "disposition": "reply", "reason": "Teammate asking for technical assistance"}]',
             "",
             "Emails to classify:"
         ]

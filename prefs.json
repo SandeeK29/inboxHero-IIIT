@@ -1,0 +1,10 @@
+{
+  "cc_correspondence_rule": {
+    "description": "CC sam@paperjet.io on mail related to organization",
+    "parameters": {
+      "entity_or_sender": "organization",
+      "cc_recipient": "sam@paperjet.io"
+    },
+    "source_msg_id": "m039"
+  }
+}
