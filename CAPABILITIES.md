@@ -1,7 +1,7 @@
 # Project inboxHero: Agentic Email Assistant
 **IIIT Hyderabad — Fortnight Assignment 06: Agentic Systems in the Wild**  
 **Student:** Sandeep Kulkarni (`evernorth-aai-1150010`)  
-**Repository:** https://github.com/SandeeK29/inboxHero-IIIT
+**Repository:** [https://github.com/SandeeK29/inboxHero-IIIT](https://github.com/SandeeK29/inboxHero-IIIT)  
 **Primary Model:** gemma4:e2b via Ollama (Local)  
 **Framework:** None (Pure Python Standard Library + Modular Architecture)  
 
@@ -15,31 +15,36 @@
 
 ```mermaid
 flowchart TD
-    A[Raw Inbox: 100 Messages] --> B[Security Scanner: R5]
-    B -- Hostile Injections & Phishing --> C[Refusal Log & Preserved in Place]
-    B -- Clean Email Data --> D[Rule Engine: Zero-Token Triage]
+    A["Raw Inbox: 100 Messages"] --> B["Security Scanner: R5"]
+    B -->|"Hostile Injections & Phishing"| C["Refusal Log & Preserved in Place"]
+    B -->|"Clean Email Data"| D["Rule Engine: Zero-Token Triage"]
     
-    D -- Deterministic Receipts/Notifications --> E[Auto-Archive / Digest: 33 Msgs]
-    D -- Human / Ambient Needs Analysis --> F[gemma4:e2b via Ollama: Batched Triage]
+    D -->|"Deterministic Receipts / Notifications"| E["Auto-Archive / Digest: 33 Msgs (0 Tokens)"]
+    D -->|"Human / Ambient Needs Analysis"| F["gemma4:e2b via Ollama: Batched Triage"]
     
-    F --> G{Disposition}
-    G -- Reply --> H[Grounded Drafter: R2]
-    G -- Archive / Defer / Escalate --> I[Decisions Log]
+    F --> G{"Disposition"}
+    G -->|"Reply"| H["Grounded Drafter: R2"]
+    G -->|"Archive / Defer / Escalate / Delegate"| I["Decisions Log"]
     
-    H --> J[Thread-Walk & Cross-Thread Retrieval]
-    J -- Context Found & Verified --> K[Grounded Draft with Citations]
-    J -- Missing Context --> L[Cite-or-Silence: Silence & Surface in Pane 2]
+    H --> J["Thread-Walk & Cross-Thread Retrieval"]
+    J -->|"Context Found & Verified"| K["Grounded Draft with Citations"]
+    J -->|"Missing Context"| L["Cite-or-Silence: Silence & Surface in Pane 2"]
     
-    K --> M[Standing Instructions / Prefs: R4]
-    M --> N[Safety Gate: R3]
+    K --> M["Standing Instructions / Prefs: R4"]
+    M --> N["Safety Gate: R3"]
     
-    N -- --dry-run Mode --> O[0 Outbox Writes - Intercept Logged]
-    N -- Live Mode + Human 'y' --> P[Atomic Outbox File Written]
+    N -->|"--dry-run Mode"| O["0 Outbox Writes - Intercept Logged"]
+    N -->|"Live Mode + Human 'y'"| P["Atomic Outbox File Written"]
     
-    E & I & K & L & C --> Q[Three-Pane Dashboard: R6]
-    Q --> R[Pane 1: Pending Gated Actions]
-    Q --> S[Pane 2: Hostile Threats & Ungroundable Inquiries]
-    Q --> T[Pane 3: Commitments & Schedule Collisions]
+    E --> Q["Three-Pane Dashboard: R6"]
+    I --> Q
+    K --> Q
+    L --> Q
+    C --> Q
+    
+    Q --> R["Pane 1: Pending Gated Actions"]
+    Q --> S["Pane 2: Hostile Threats & Ungroundable Inquiries"]
+    Q --> T["Pane 3: Commitments & Schedule Collisions"]
 ```
 
 ---
@@ -142,7 +147,7 @@ Untrusted text enters the system exclusively through **email bodies, subject lin
 ### 4. Name your own machinery.
 `inboxHero` is powered by:
 1. **The Cite-or-Silence Grounding Engine:** Enforces factual traceability by verifying that every assertion in a draft is backed by exact message IDs in the conversation index.
-2. **The Dual-Pass Triage Pipeline:** A hybrid router combining a zero-token regex rules engine (handling 33 transactional emails instantly) with Gemini 3.6 Flash batching (handling remaining complex messages in batches of 10).
+2. **The Dual-Pass Triage Pipeline:** A hybrid router combining a zero-token regex rules engine (handling 33 transactional emails instantly) with `gemma4:e2b` via Ollama batching (handling remaining complex messages in batches of 10).
 3. **The Irreversible Action Safety Gate:** A stateful interceptor that buffers proposed sends, logs dry-run intercepts, and demands human terminal confirmation before touching the filesystem `outbox/`.
 4. **The Cross-Process Preference Memory Store:** A persistent key-value store (`prefs.json`) that decouples preference learning from execution, surviving process terminations.
 5. **The Three-Pane Executive Glass Dashboard:** A responsive HTML/CSS interface synthesizing pending human actions, security threat refusals, and calendar commitments with collision surfacing.
@@ -155,16 +160,16 @@ All capabilities and test suites can be validated via the standard terminal:
 
 ```bash
 # Run complete test suite (Parts 1-7)
-python3 -m unittest discover -s tests -p "test_part*.py" -v
+python -m unittest discover -s tests -p "test_part*.py" -v
 
 # Run individual capabilities via demo CLI
-python3 demo.py --cap R1          # Part 2: Zero inbox triage
-python3 demo.py --cap R2 --msg m008 # Part 3: Grounded draft for m008
-python3 demo.py --cap R3 --dry-run # Part 4: Safety gate intercept
-python3 demo.py --cap R4          # Part 5: Standing instructions
-python3 demo.py --cap R5          # Part 6: Hostile inbox defense
-python3 demo.py --cap R6          # Part 7: Three-pane dashboard
-python3 demo.py --cap X1          # Part 8: Follow-up tracker
-python3 demo.py --cap X2          # Part 8: Thread summarizer
-python3 demo.py --cap X3          # Part 8: Smart daily digest with memory
+python demo.py --cap R1          # Part 2: Zero inbox triage
+python demo.py --cap R2 --msg m008 # Part 3: Grounded draft for m008
+python demo.py --cap R3 --dry-run # Part 4: Safety gate intercept
+python demo.py --cap R4          # Part 5: Standing instructions
+python demo.py --cap R5          # Part 6: Hostile inbox defense
+python demo.py --cap R6          # Part 7: Three-pane dashboard
+python demo.py --cap X1          # Part 8: Follow-up tracker
+python demo.py --cap X2          # Part 8: Thread summarizer
+python demo.py --cap X3          # Part 8: Smart daily digest with memory
 ```

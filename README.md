@@ -1,10 +1,10 @@
 # inboxHero: Autonomous Agentic Email Assistant
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Architecture: Zero Framework](https://img.shields.io/badge/architecture-zero--framework%20(pure%20python)-green.svg)]()
-[![Model: gemma4:e2b](https://img.shields.io/badge/model-gemma4%3Ae2b%20(ollama)-orange.svg)]()
-[![Security: Hardened](https://img.shields.io/badge/security-7--vector%20threat%20defense-red.svg)]()
-[![Status: Complete](https://img.shields.io/badge/status-all%20parts%20verified-brightgreen.svg)]()
+![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)
+![Architecture: Zero Framework](https://img.shields.io/badge/architecture-zero--framework_(pure_python)-green.svg)
+![Model: gemma4:e2b](https://img.shields.io/badge/model-gemma4%3Ae2b_(ollama)-orange.svg)
+![Security: Hardened](https://img.shields.io/badge/security-7--vector_threat_defense-red.svg)
+![Status: Complete](https://img.shields.io/badge/status-all_parts_verified-brightgreen.svg)
 
 ---
 
@@ -49,33 +49,38 @@
 
 ```mermaid
 flowchart TD
-    A[Raw Inbox: 100 Messages] --> B[Security Scanner: R5 / security.py]
+    A["Raw Inbox: 100 Messages"] --> B["Security Scanner: R5 / security.py"]
     
-    B -- Hostile Vectors / Injections --> C[Refusal Log & Safe Quarantine]
-    B -- Clean Verified Messages --> D[Deterministic Rule Engine: rules.py]
+    B -->|"Hostile Vectors / Injections"| C["Refusal Log & Safe Quarantine"]
+    B -->|"Clean Verified Messages"| D["Deterministic Rule Engine: rules.py"]
     
-    D -- Receipts / Notifications / CI Alerts --> E[Auto-Archive / Digest: 33 Msgs - 0 Tokens]
-    D -- Complex / Founder Messages --> F[Semantic Triage: gemma4:e2b via Ollama]
+    D -->|"Receipts / Notifications / CI Alerts"| E["Auto-Archive / Digest: 33 Msgs (0 Tokens)"]
+    D -->|"Complex / Founder Messages"| F["Semantic Triage: gemma4:e2b via Ollama"]
     
-    F --> G{Disposition}
-    G -- Archive / Defer / Escalate / Delegate --> H[Decisions Log: decisions.json]
-    G -- Reply --> I[Grounded Drafter: R2 / drafting.py]
+    F --> G{"Disposition"}
+    G -->|"Archive / Defer / Escalate / Delegate"| H["Decisions Log: decisions.json"]
+    G -->|"Reply"| I["Grounded Drafter: R2 / drafting.py"]
     
-    I --> J[Thread-Walk & Cross-Thread Fact Retrieval]
-    J -- Context Verified in History --> K[Grounded Reply Draft with Message Citations]
-    J -- Context Missing / Ambiguous --> L[Cite-or-Silence: Suppress Draft & Route to Pane 2]
+    I --> J["Thread-Walk & Cross-Thread Fact Retrieval"]
+    J -->|"Context Verified in History"| K["Grounded Reply Draft with Message Citations"]
+    J -->|"Context Missing / Ambiguous"| L["Cite-or-Silence: Suppress Draft & Route to Pane 2"]
     
-    K --> M[Standing Memory Engine: R4 / memory.py]
-    M -- Apply Learned Preferences --> N[Draft Enriched with Persistent Rules]
+    K --> M["Standing Memory Engine: R4 / memory.py"]
+    M -->|"Apply Learned Preferences"| N["Draft Enriched with Persistent Rules"]
     
-    N --> O[Safety Gate: R3 / gate.py]
-    O -- --dry-run Mode --> P[Intercept Logged - 0 Outbox Writes]
-    O -- Live Mode + Terminal 'y' Approval --> Q[Atomic Outbox JSON File Emitted]
+    N --> O["Safety Gate: R3 / gate.py"]
+    O -->|"--dry-run Mode"| P["Intercept Logged (0 Outbox Writes)"]
+    O -->|"Live Mode + Terminal 'y' Approval"| Q["Atomic Outbox JSON File Emitted"]
     
-    E & H & K & L & C --> R[3-Pane Dashboard Engine: R6 / dashboard.py]
-    R --> S1[Pane 1: Pending Gated Actions]
-    R --> S2[Pane 2: Hostile Threats & Ungroundable Queries]
-    R --> S3[Pane 3: Commitments & Schedule Collisions]
+    E --> R["3-Pane Dashboard Engine: R6 / dashboard.py"]
+    H --> R
+    K --> R
+    L --> R
+    C --> R
+    
+    R --> S1["Pane 1: Pending Gated Actions"]
+    R --> S2["Pane 2: Hostile Threats & Ungroundable Queries"]
+    R --> S3["Pane 3: Commitments & Schedule Collisions"]
 ```
 
 ---
@@ -239,12 +244,12 @@ Start-Process dashboard.html
 We deliberately and strictly refused to automate two critical failure modes in `inboxHero`:
 
 1. **Autonomous Outbound Email Dispatch (`send`) and Permanent Deletion (`delete`):**
-   * *Explanation:* In an executive email environment, external communication carries legal, financial, and reputational liability. If an AI agent autonomously transmits an unreviewed message, any subtle hallucination, tone miscalculation, or compromised context becomes an irreversible real-world event. 
-   * *Implementation:* We established an immutable **Irreversibility Boundary** in `gate.py`. The agent is granted autonomy to triage, search, summarize, cross-reference, extract preferences, and draft responses. However, the final transition of emitting data to the external network (`outbox/`) is completely intercepted. In `--dry-run` mode, zero files are created. In live execution mode, the full dispatch payload (recipient, CC list, subject, and body) is presented in the terminal and requires an explicit, synchronous human keystroke (`y`) to proceed.
+   * **Explanation:** In an executive email environment, external communication carries legal, financial, and reputational liability. If an AI agent autonomously transmits an unreviewed message, any subtle hallucination, tone miscalculation, or compromised context becomes an irreversible real-world event.
+   * **Implementation:** We established an immutable **Irreversibility Boundary** in `gate.py`. The agent is granted autonomy to triage, search, summarize, cross-reference, extract preferences, and draft responses. However, the final transition of emitting data to the external network (`outbox/`) is completely intercepted. In `--dry-run` mode, zero files are created. In live execution mode, the full dispatch payload (recipient, CC list, subject, and body) is presented in the terminal and requires an explicit, synchronous human keystroke (`y`) to proceed.
 
 2. **Ungrounded / Speculative Replies (The Cite-or-Silence Principle):**
-   * *Explanation:* Standard conversational AI assistants tend to placate users by generating vague, polite, or hallucinated placeholder responses when they lack necessary facts (e.g., replying *"We are actively working on our SOC 2 compliance and will update you shortly"* when no SOC 2 status exists).
-   * *Implementation:* In `drafting.py`, if an email asks for factual information (such as `m012` inquiring about PaperJet's SOC 2 audit timeline) and the required data cannot be verified within the message's thread history or cross-thread records, the system **refuses to draft a response**. It outputs an explicit ungroundable notice, produces zero speculative drafts, and routes the inquiry directly to **Pane 2** of the Executive Dashboard for human resolution.
+   * **Explanation:** Standard conversational AI assistants tend to placate users by generating vague, polite, or hallucinated placeholder responses when they lack necessary facts (e.g., replying *"We are actively working on our SOC 2 compliance and will update you shortly"* when no SOC 2 status exists).
+   * **Implementation:** In `drafting.py`, if an email asks for factual information (such as `m012` inquiring about PaperJet's SOC 2 audit timeline) and the required data cannot be verified within the message's thread history or cross-thread records, the system **refuses to draft a response**. It outputs an explicit ungroundable notice, produces zero speculative drafts, and routes the inquiry directly to **Pane 2** of the Executive Dashboard for human resolution.
 
 ---
 
